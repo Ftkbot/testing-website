@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學習CSS</title>
+    <!-- <style>
+        /* 對元素本身直接修飾 */
+        /* header{
+            color: blueviolet;
+        }
+        p{ 
+            color: aquamarine;
+        }
+        /* 用ID的方式來選擇 */
+        /* #my-header p{
+            color: yellow;
+        } */ 
+    </style> -->
+    <!-- <link rel="stylesheet" href="./style.css">
+     外部樣式表(External Stylesheets)的方式 -->
+    <style>
+        #p1{
+            /* 一般選色 */
+            color:aqua;
+        }
+        #p2{
+            /* RGB選色 */
+            color:rgb(210, 210, 27)
+        }
+        #p3{
+            /* 16進制選色 */
+            color:#FFFFFF;
+            background-color: #000000;
+        }
+        #p4{
+            /* HSL選色: H指的是色調 S指的是飽和度 L指的是亮度 */
+            color:hsl(100, 74%, 45%)
+        }
+        
+    </style>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet"> -->
+    
+</head>
+<body>
+    <header id="my-header">
+    <h1>CSS 語法入門</h1>
+        <p>這是一個段落</p>
+    </header>
+    <p>這是另一個段落</p>
+<p>_________________________________________________</p>
+<h1>CSS 的三種使用方式</h1>
+    <h2>行內樣式(Inline styling)</h2>
+    <p style="color: blue;">這是一段文字</p>
+    <h2>內嵌樣式(Embedded styling)</h2>
+    <p>在head裡面修改</p>
+    <h2>外部樣式表(External Stylesheets)</h2> 
+    <p>用link:css去插入想要修改的元素</p>
+<p>_________________________________________________</p>
+<h1>CSS的顏色</h1>
+    <p id="p1">這是第一段</p>
+    <p id="p2">這是第二段</p>
+    <p id="p3">這是第三段</p>
+    <p id="p4">這是第四段</p>
+<p>CSS 字體介紹</p>
+<p>要在head裡面進行編輯</p>
+<style>
+    @font-face {
+        font-family: "Protest Guerrilla";
+        src: url(testing\ font.ttf);
+    }
+    #H1{
+        /* 字形的種類 */
+        /* font-family: cursive, sans-serif; */
+        font-family: "Protest Guerrilla", sans-serif;
+        /* 字體的大小 */
+        font-size: 70px;/*px: pixel
+        /* 字體的粗細 */
+        font-weight: 500; /*粗的: bold 正常的: normal*/
+        /* 字體的風格 */
+        font-style: italic;
+    }
+    #P1{
+        /* font-family: cursive, sans-serif; */
+        font-family: "Protest Guerrilla", sans-serif;
+        font-size: 1em;
+        font-style: italic;
+    }
+</style>
+    <h1 id="H1">article</h1>
+    <p id="P1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ut doloremque amet rem esse sed totam neque, exercitationem debitis hic deleniti vel, molestias quae laboriosam dolor corrupti ipsam temporibus dolorem.</p>
+<p>_________________________________________________</p> 
+<h1>主題:邊框 Border</h1> 
+    <style>
+        #H2{
+            /* 邊框的型態 */
+            border-style: solid;
+            /* 邊框的長度 */
+            border-width: 5px;
+            /* 邊框的顏色 */
+            border-color: red;
+            /* 圓角邊框 */
+            border-radius: 10px;
+        }
+        #P2{
+            /* 型態 長度 顏色 一次一起 */
+            border: solid 3px green;
+            border-radius: 10px;
+        }
+        #P3{
+            /* 編輯邊框的上下左右 */
+            border-top: 3px solid red;
+            border-bottom: 5px dashed sandybrown;
+            border-left: 3px solid springgreen;
+            border-right: 3px solid springgreen;
+
+        }
+    </style>
+    <h2 id="H2">Article</h2>
+    <p id="P2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia similique quas tempore laboriosam placeat cumque. Aperiam cumque debitis aliquid repudiandae eum quam esse, illum vero unde delectus autem qui fugiat!</p>
+    <p id="P3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas sed fugiat deserunt cum nisi doloribus praesentium rerum. Sed, ducimus. Quod cupiditate repellendus exercitationem necessitatibus excepturi odio rerum harum ducimus?</p>
+<p>_________________________________________________</p>
+<h1>CSS中的陰影</h1>
+    <style>
+        #hh{
+            /* 先是水平陰影, 後面是垂直陰影, 陰影模糊度 陰影的顏色*/
+            text-shadow: 10px 5px 5px #441cbe;
+        }
+        #box_1{
+            box-shadow: 10px 5px 5px #8f2020;
+        }
+    </style>
+    <h2 id="hh">這是一段文字</h2>
+    <!-- div常被稱為"盒子"，因為它常用來包覆元素 -->
+    <div id="box_1">我是第一個盒子</div>
+    <div id="box_2">我是第二個盒子</div>
+<p>_________________________________________________</p>
+<h1>CSS 中的邊距 Margin</h1>
+    <style>
+        #mp1{
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        #mdiv1{
+            margin-top:30px ;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            border: 2px solid green;
+            border-radius: 5px;
+            width: 150px;
+            height: 150px;
+        }
+        #mdiv2{
+            /* margin簡寫的順序 上 右 下 左 */
+            margin: 30px 30px 30px 30px;
+            border: 2px solid green;
+            border-radius: 5px;
+            width: 150px;
+            height: 150px;
+        }
+        #mdiv3{
+            /* 如果四邊的margin都一樣的話，可以只下一個margin就可以了 */
+            margin: 30px;
+            border: 2px solid green;
+            border-radius: 5px;
+            width: 150px;
+            height: 150px;
+        }
+        #mdiv4{
+            /* 至中效果，auto前面不加px則為上下左右都至中，前面的px則是控制上下至中 */
+            margin:50px auto;
+            border: 2px solid green;
+            border-radius: 5px;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <h2>這是標題元素</h2>
+    <p id="mp1">段落一Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum odit possimus repellendus reiciendis? Eaque dolorem possimus eos quos magnam delectus facere! Necessitatibus modi laborum sapiente aut vitae quam sunt cupiditate!</p>
+    <p id="mp2">段落二Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum odit possimus repellendus reiciendis? Eaque dolorem possimus eos quos magnam delectus facere! Necessitatibus modi laborum sapiente aut vitae quam sunt cupiditate!</p>
+    <div id="mdiv1">這是第一個BOX</div>
+    <div id="mdiv2">這是第二個BOX</div>
+    <div id="mdiv3">這是第三個BOX</div>
+    <div id="mdiv4">這是第四個BOX</div>
+<p>_________________________________________________</p>
+<h1>Float 浮動排版</h1>
+    <style>
+        #img1{
+            float: right;
+            width: 100px;
+        }
+        #fdiv{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            float: right;
+        }
+    </style>
+    <img id="img1" src="./image1.jpg" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aliquam ad distinctio, soluta vero repellendus quis nostrum reprehenderit tempora fuga, enim suscipit itaque rerum consequatur! Veritatis eum ipsa debitis voluptatum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatibus, fuga dolores dolorum aperiam adipisci totam, animi, officiis natus laborum reiciendis doloribus placeat quasi consectetur facere! Vitae sequi illum sunt.</p>
+    <div id="fdiv">第一區塊</div>
+    <div id="fdiv">第二區塊</div>
+    <div id="fdiv">第三區塊</div>
+<p>_________________________________________________</p>
+<h1>CSS Overflow</h1>
+        <style>
+            #odiv1{
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+                /* Hidden屬性介紹 */
+                overflow: hidden;
+            }
+            #odiv2{
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+                /* Scroll屬性介紹 */
+                overflow: scroll;
+            }
+            #odiv3{
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+                /* Visible屬性介紹 */
+                overflow: visible;
+            }
+            #odiv4{
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+                /* Clip屬性介紹 */
+                overflow: clip;
+            }
+            #odiv5{
+                width: 200px;
+                height: 200px;
+                border: 1px solid;
+                /* Auto屬性介紹 */
+                overflow: Auto;
+            }
+        </style>
+        <div id="odiv1">
+            <p>
+                <b>Hidden:</b><br>
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum rem autem quas inventore, suscipit assumenda. Libero accusamus cupiditate repudiandae cumque veniam corporis quis reiciendis ipsam sit ducimus, veritatis numquam! consectetur adipisicing elit. Labore, ratione porro autem quibusdam accusantium, odio voluptatibus quod sapiente enim aliquid dolorum eaque ut quisquam, minus eius consequatur ex ullam praesentium!
+            </p>
+        </div>
+        <div id="odiv2">
+            <p>
+                <b>scroll:</b><br>
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore. Odit debitis inventore nisi ipsa eveniet fugiat impedit possimus totam placeat doloremque facilis soluta ut reprehenderit maiores, veniam nulla laudantium! consectetur adipisicing elit. Labore, ratione porro autem quibusdam accusantium, odio voluptatibus quod sapiente enim aliquid dolorum eaque ut quisquam, minus eius consequatur ex ullam praesentium!
+            </p>
+        </div><div id="odiv3">
+            <p>
+                <b>visible:</b><br>
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt perspiciatis ex velit officia? Facere, qui, officiis deserunt recusandae excepturi dolore tempore quaerat quidem aspernatur in enim expedita hic inventore! consectetur adipisicing elit. Labore, ratione porro autem quibusdam accusantium, odio voluptatibus quod sapiente enim aliquid dolorum eaque ut quisquam, minus eius consequatur ex ullam praesentium!
+            </p>
+        </div><div id="odiv4">
+            <p>
+                <b>clip:</b><br>
+                Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dignissimos at omnis esse consectetur. Laboriosam delectus veniam corrupti iusto, harum minima sapiente distinctio sed minus consectetur excepturi odio praesentium reprehenderit? consectetur adipisicing elit. Labore, ratione porro autem quibusdam accusantium, odio voluptatibus quod sapiente enim aliquid dolorum eaque ut quisquam, minus eius consequatur ex ullam praesentium!
+            </p>
+        </div>
+        <div id="odiv5">
+            <p>
+                <b>auto:</b><br>
+                Lorem ipsum dolor sit amet Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo suscipit ut amet delectus nihil at eveniet consequuntur, temporibus distinctio deleniti perferendis optio magni veniam vero facere dolorem quia, eos quod. consectetur adipisicing elit. Labore, ratione porro autem quibusdam accusantium, odio voluptatibus quod sapiente enim aliquid dolorum eaque ut quisquam, minus eius consequatur ex ullam praesentium!
+            </p>
+        </div>
+<p>_________________________________________________</p>
+<h1>CSS中的 DIsplay 屬性</h1>
+        <style>
+            #ddiv1{
+                /* display: inline; */
+                display: inline-block;/*inline-block可以設定長寬高*/
+                height: 200px;
+                
+            }
+            #dspan{
+                /* display: block; */
+                display: inline-block;
+            }
+            #dp1{
+                display: none;
+            }
+        </style>
+        <div id="ddiv1">我是DIV (block區塊)</div>
+        <span id="dspan">我是span 1 (inline)</span>
+        <span id="dspan">我是span 2</span>
+        <span id="dspan">我是span 3</span>
+        <span id="dspan">我是span 4</span>
+        <p id="dp1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum esse consequuntur animi ipsum aliquid fugiat eveniet eius quis nobis tempora quaerat iusto quae, perferendis molestiae rerum mollitia ad quisquam?</p>p
+<p>_________________________________________________</p>
+<h1>CSS 高度與寬度</h1>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: bisque;
+            height: 100vh;
+        
+        }
+        .box{
+            min-width: 25%;
+            max-width: 50%;
+            height:100px;
+            border: 3px solid #000000;
+            float: left
+        }
+    </style>
+    <div class="container">
+        <div class="box">
+            我是第一個BOX
+        </div>
+        <div class="box">
+            我是第二個BOX
+        </div>
+        <div class="box">
+            我是第三個BOX
+        </div><div class="box">
+            我是第四個BOX
+        </div>
+    </div>
+<p>_________________________________________________</p>
+<h1>CSS中的定位 position</h1>
+<style>
+    .container1{
+        width: 500px;
+        height: 800px;
+        border: 1px solid red;
+        /* 確保item在container裡面 */
+        position:relative;
+    }
+    .item{
+        width: 50px;
+        height: 50px;
+        border: 3px solid orange;
+        border-radius: 3px;
+    }
+    /* 絕對位置 absolute*/
+    .item1{
+        position: absolute;
+        top: 10px;
+        right: 100px;
+    }
+    /* 固定位置 fixed*/
+    .item6{
+        position: fixed;
+        top:100px;
+        right: 100px;
+        overflow:auto;
+        /* 以整個網頁為主 */
+    }
+    /* Sticky: 不預設定右方或左方的距離*/
+    .item3{
+        position: sticky;
+        top: 50px;
+        right: 50px;
+        bottom: 50px;
+        left: 50px
+        /* 跟fixed一樣，但是是以container為主 */
+
+    }
+</style>
+    <div class="container1">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">嘿嘿我會跟這你跑喔</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+<p>_________________________________________________</p>
+<h1>CSS盒模型 (box model)</h1>
+    <style>
+        .bmbox{
+            width: 200px;
+            height: 200px;
+            background-color: #3136ce;
+            margin-bottom: 30px;
+            border: 2px solid #000000;
+            /* padding 內間距 */
+            padding-top: 10px;
+            padding-left: 30px;
+        }
+    </style>
+    <div class="bmbox">frist div</div>
+    <div class="bmbox">second div</div>
+<p>_________________________________________________</p>
+<h1>Padding 內邊距</h1>
+    <style>
+        .pdiv{
+            margin: 30px;
+            border: 1px solid #000000;
+            /* padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px; */
+            /* padding-left: 20px; */
+            /* padding: 10px 20px 10px 20px; */
+            padding: 10px;
+        }
+    </style>
+    <div class="pdiv">div 元素有內邊距 邊距 邊框 .....................................</div>
+
+<p>_________________________________________________</p>
+<h1>CSS 元素的選擇器</h1>
+        <!-- 選擇器{
+         屬性: 值;
+         } -->
+    <Style>
+        a{
+            text-decoration: none;/*消除連結底線*/
+        }
+    </Style>
+    <div>
+        <h2>我是一個標題</h2>
+        <p>我是一個段落</p>
+        <P>第二個段落</P>
+        <a href="#">我是一個連結</a>
+        <span>我是一個span標籤</span>
+    </div>
+<p>_________________________________________________</p>
+<h1>ID 與 Class選擇器</h1>
+    <style>
+        #ih2{
+            color: #441cbe;
+        }
+        .highlight{
+            color: aqua;
+        }
+    </style>
+    <h2 id="ih2">小標題</h2>
+    <p>
+        我是段落。<span class="highlight">要強調的內文</span>
+    </p>
+    <p>
+        我是段落。<span class="highlight">要強調的內文</span>
+    </p>
+<p>_________________________________________________</p>
+<h1>後代選擇器</h1>
+    <style>
+        #main-content p{
+            color: #8f2020;
+        }
+        #sub-content p{
+            color: blue;
+        }
+    </style>
+    <div id="main-content">
+        <p>我是後帶節點</p>
+        <p>我是後帶節點</p>
+        <p>我是後帶節點</p>
+        <p>我是後帶節點</p>
+        <p>我是後帶節點</p>
+        <div id="sub-content">
+            <p>我也是後代節點，還是sub的子節點</p>
+        </div>
+    </div>
+    <p>我不是後代節點</p>
+<p>_________________________________________________</p>
+<h1>子選擇器</h1>
+    <style>
+        #main2-content >p{
+            color: #441cbe;
+        }
+        #main2-content > div > p{
+            color: #8f2020;
+        }
+    </style>
+    <div id="main2-content">
+        <p>我是直接子節點</p>
+        <div>
+            <p>我不是子節點，我是孫節點</p>
+        </div>
+    </div>
+<p>_________________________________________________</p>
+<h1>鄰居選擇器</h1>
+    <style>
+        #all-article h2{
+            color: #df3cc1;
+        }
+        #all-article h2+p{
+            color: #2cb57c;
+        }
+    </style>
+    <div id="all-article">
+        <article>
+            <h2>標題一</h2>
+            <P>作者1</P>
+            <p>內容1</p>
+        </article>
+        <article>
+            <h2>標題二</h2>
+            <P>作者2</P>
+            <p>內容2</p>
+        </article>
+        <article>
+            <h2>標題三</h2>
+            <P>作者3</P>
+            <p>內容3</p>
+        </article>
+    </div>
+<p>_________________________________________________</p>
+<h1>屬性選擇器</h1>
+    
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
